@@ -1,12 +1,18 @@
 #include <iostream>
 
-#define LAB 3
+#define LAB 5
 
 #if LAB == 2
 #include "Matrix.h"
 #endif
 #if LAB ==3
 #include "Cstring.h"
+#endif
+#if LAB ==4 || LAB ==5
+#include "Shape.h"
+#include "Triangle.h"
+#include "Square.h"
+#include "Circle.h"
 #endif
 
 int main()
@@ -65,8 +71,30 @@ int main()
 	std::cin >> str2;
 	*str += *str2;
 	std::cout << *str + *(*str += *str);
+	delete str;
+	delete str2;
 #endif
+#if LAB == 4
+	//Shape * triamgle = new Triangle();
+	Shape * square = new Square(2,3);
+	Shape * circle = new Circle(3);
+	GlIntersect(square,circle);
 
+	
+	//delete triamgle;
+	delete square;
+	delete circle;
+#endif
+#if LAB == 5
+	Shape * square = new Square(2, 3);
+	Shape * circle = new Circle(3);
+	
+	square->print();
+	circle->print();
+
+	delete square;
+	delete circle;
+#endif
 
 	system("pause");
 	return 0;

@@ -108,6 +108,7 @@ Cstring * Cstring::operator+=(Cstring val) //+
 
 Cstring::~Cstring() //+
 {
+
 	delete[] str;
 }
 

@@ -115,13 +115,29 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Circle.cpp" />
     <ClCompile Include="Cstring.cpp" />
+    <ClCompile Include="Line.cpp" />
     <ClCompile Include="Matrix.cpp" />
+    <ClCompile Include="Point.cpp" />
+    <ClCompile Include="Shape.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="Square.cpp" />
+    <ClCompile Include="ThreeDShape.cpp" />
+    <ClCompile Include="Triangle.cpp" />
+    <ClCompile Include="TwoDShape.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Circle.h" />
     <ClInclude Include="Cstring.h" />
+    <ClInclude Include="Line.h" />
     <ClInclude Include="Matrix.h" />
+    <ClInclude Include="Point.h" />
+    <ClInclude Include="Shape.h" />
+    <ClInclude Include="Square.h" />
+    <ClInclude Include="ThreeDShape.h" />
+    <ClInclude Include="Triangle.h" />
+    <ClInclude Include="TwoDShape.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
