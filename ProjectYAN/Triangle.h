@@ -9,12 +9,9 @@ public:
 	Triangle();
 	Triangle(float edge,float edgeheight,float height);
 	~Triangle();
-
-	// Inherited via Shape
+	//реализации абстрактных методов
 	virtual bool intersect(Shape *) override;
 	virtual std::string name() override;
-
-	// Inherited via Shape
 	virtual float area() override;
 };
 

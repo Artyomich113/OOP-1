@@ -9,15 +9,9 @@ public:
 	Circle(float val);
 	Circle();
 	~Circle();
-	
+	//реализации абстрактных методов
 	virtual bool intersect(Shape *) override;
-
 	virtual std::string name() override;
-
-
-	// Inherited via TwoDShape
-	
 	virtual float area() override;
-
 };
 

@@ -7,9 +7,7 @@ public:
 	TwoDShape();
 	virtual ~TwoDShape();
 
-
-	// Inherited via Shape
-	virtual float volume();
+	virtual float volume();//в 2д фигурах объем всегда 0
 
 	virtual float area() = 0;
 

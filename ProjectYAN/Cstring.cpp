@@ -87,7 +87,6 @@ bool Cstring::operator!=(Cstring val)
 
 bool Cstring::operator==(Cstring  val)//+
 {
-
 	return (strcmp(this->str, val.str) == 0) ? true : false;
 }
 
@@ -104,7 +103,6 @@ Cstring * Cstring::operator+=(Cstring val) //+
 
 	return this;
 }
-
 
 Cstring::~Cstring() //+
 {

@@ -1,6 +1,16 @@
 #include <iostream>
 
-#define LAB 5
+/*
+файлы для лаб кроме source, для кажного хедера есть cpp
+1-
+2- Matrix.h
+3- Cstring.h
+4- Shape.h, Triangle.h, Square.h, Circle.h, TwoDShape.h, ThreeDShape.h - в следующей лабе появилось несколько абстрактных классов между Shape и фигурами, работают все так же,ведь реализация интерфейса ни куда не делась 
+5- Shape.h, Triangle.h, Square.h, Circle.h, TwoDShape.h, ThreeDShape.h
+
+*/
+
+#define LAB 4
 
 #if LAB == 2
 #include "Matrix.h"
@@ -13,6 +23,7 @@
 #include "Triangle.h"
 #include "Square.h"
 #include "Circle.h"
+bool GlIntersect(Shape *ob1, Shape *ob2); //заранее декларация функции
 #endif
 
 int main()
@@ -67,10 +78,10 @@ int main()
 #endif 
 #if LAB == 3
 	Cstring * str = new Cstring(),* str2 = new Cstring();
-	std::cin >> str;
+	std::cin >> str; //используется перегруженный оператор ввода
 	std::cin >> str2;
 	*str += *str2;
-	std::cout << *str + *(*str += *str);
+	std::cout << *str + *(*str += *str); // используется перегруженный оператор вывода
 	delete str;
 	delete str2;
 #endif
@@ -78,9 +89,8 @@ int main()
 	//Shape * triamgle = new Triangle();
 	Shape * square = new Square(2,3);
 	Shape * circle = new Circle(3);
-	GlIntersect(square,circle);
-
 	
+	GlIntersect(square,circle);
 	//delete triamgle;
 	delete square;
 	delete circle;
