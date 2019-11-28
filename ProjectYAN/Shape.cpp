@@ -19,7 +19,7 @@ Shape::~Shape()
 
 bool GlIntersect(Shape *ob1, Shape *ob2)
 {
-	std::cout << ob1->name() << " is using some func to define intersection with " << ob2->name();
+	std::cout << ob1->name() << " is using some func to define intersection with " << ob2->name() << std::endl;
 	ob1->intersect(ob2);
 
 	return true;

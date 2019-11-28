@@ -21,7 +21,7 @@ Triangle::~Triangle()
 
 bool Triangle::intersect(Shape *ob)
 {
-	std::cout << name() << " implementation for intersection with " << ob->name();
+	std::cout << name() << " implementation for intersection with " << ob->name() << std::endl;
 	return true;
 }
 

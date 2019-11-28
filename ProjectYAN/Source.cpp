@@ -10,7 +10,7 @@
 
 */
 
-#define LAB 4
+#define LAB 5
 
 #if LAB == 2
 #include "Matrix.h"
@@ -81,7 +81,7 @@ int main()
 	std::cin >> str; //используется перегруженный оператор ввода
 	std::cin >> str2;
 	*str += *str2;
-	std::cout << *str + *(*str += *str); // используется перегруженный оператор вывода
+	std::cout << *str + *(*str += *str) << std::endl; // используется перегруженный оператор вывода
 	delete str;
 	delete str2;
 #endif
@@ -98,10 +98,13 @@ int main()
 #if LAB == 5
 	Shape * square = new Square(2, 3);
 	Shape * circle = new Circle(3);
+	Shape * triangle = new Triangle(3,2,4);
 	
 	square->print();
 	circle->print();
+	triangle->print();
 
+	delete triangle;
 	delete square;
 	delete circle;
 #endif

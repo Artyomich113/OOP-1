@@ -128,6 +128,7 @@
     <ClCompile Include="TwoDShape.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Color.h" />
     <ClInclude Include="Circle.h" />
     <ClInclude Include="Cstring.h" />
     <ClInclude Include="Line.h" />
