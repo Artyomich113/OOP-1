@@ -1,18 +1,22 @@
 #pragma once
 #include "Color.h"
+#include "Line.h"
 
 class Point
 {
+public:
 	float x;
 	float y;
 	Color color;
-public:
-	float getX();
-	void setX(float);
-	float getY();
-	void setY(float);
-	Point(float,float,Color);
-	void translate();
+
+	float distLine(Line);
+	float distPoint(Point);
+	Point(float,float,Color*);
+	Point(float,float);
+	void translate(float, float);
+	float distsqr(Point);
+	float vect(Point ,Point);
+	Point *operator=(Point point);
 	Point();
 	~Point();
 };

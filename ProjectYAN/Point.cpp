@@ -1,37 +1,67 @@
 #include "Point.h"
+#include <math.h>
 
 
-
-float Point::getX()
+Point::Point(float x0, float y0, Color* color)
 {
-	return 0.0f;
+	x = x0;
+	y = y0;
+	this->color = *color;
 }
 
-void Point::setX(float val)
+Point::Point(float x, float y)
 {
+	this->x = x;
+	this->y = y;
 }
 
-float Point::getY()
+void Point::translate(float dx, float dy)
 {
-	return 0.0f;
+	x += dx;
+	y += dy;
 }
 
-void Point::setY(float val)
+float Point::distPoint(Point p)
 {
-	y = val;
+	float distance = sqrt(pow(x - p.x, 2) + pow(y - p.y, 2));
+	//std::cout << " distance between " << x << "," << y << " and " << p.x << "," << p.y << "=" << distance;
+	return distance;
 }
 
-Point::Point(float, float, Color)
+float Point::distLine(Line line)
 {
+	Point p1(line.x0, line.y0), p2(line.x1, line.y1);
+	return vect(p1, p2) / p1.distPoint(p2);
 }
 
-void Point::translate()
+float Point::distsqr(Point p)
 {
+	return pow(x - p.x, 2) + pow(y - p.y, 2);
+}
+
+float Point::vect(Point p1, Point p2)
+{
+	Point v1(p1.x - x, p1.y - y), v2(p2.x - x, p2.y - y);
+
+	return abs(v1.x * v2.y - v1.y * v2.x);
+}
+
+Point * Point::operator=(Point point)
+{
+	x = point.x;
+	y = point.y;
+
+	color.r = point.color.r;
+	color.g = point.color.g;
+	color.b = point.color.b;
+
+	return this;
 }
 
 Point::Point()
 {
-
+	x = 0;
+	y = 0;
 }
 
 

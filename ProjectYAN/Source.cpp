@@ -10,7 +10,7 @@
 
 */
 
-#define LAB 5
+#define LAB 6
 
 #if LAB == 2
 #include "Matrix.h"
@@ -23,6 +23,15 @@
 #include "Triangle.h"
 #include "Square.h"
 #include "Circle.h"
+#endif
+#if LAB == 6
+#include "Point.h"
+#include "Line.h"
+#include "Color.h"
+#include "SquareEXT.h"
+#endif // LAB == 6
+
+#if LAB ==4 || LAB ==5
 bool GlIntersect(Shape *ob1, Shape *ob2); //заранее декларация функции
 #endif
 
@@ -108,6 +117,20 @@ int main()
 	delete square;
 	delete circle;
 #endif
+#if LAB == 6
+	Color * color = new Color(0.5f,0.5f,0.5f);
+	Point * center = new Point(1.0f,1.0f,color);
+	Line * line = new Line(2.0f,2.0f,2.0f,0.0f,color);
+	SquareEXT * square = new SquareEXT(center,line,color);
+	square->print();
+	square->translate(-5,-5);
+	square->print();
+	delete color;
+	delete center;
+	delete square;
+	delete line;
+#endif // LAB == 6
+
 
 	system("pause");
 	return 0;
