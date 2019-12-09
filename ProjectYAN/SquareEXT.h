@@ -4,10 +4,10 @@
 #include "Color.h"
 #include <iostream>
 
-class SquareEXT : public Point,public Line
+class SquareEXT : public Point, public Line
 {
 public:
-	Color color;
+	Color colorS;
 	SquareEXT();
 	SquareEXT(Point*, Line*,Color*);
 	~SquareEXT();

@@ -7,8 +7,7 @@ class Point
 public:
 	float x;
 	float y;
-	Color color;
-
+	Color colorP;
 	float distLine(Line);
 	float distPoint(Point);
 	Point(float,float,Color*);

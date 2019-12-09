@@ -6,7 +6,7 @@ Point::Point(float x0, float y0, Color* color)
 {
 	x = x0;
 	y = y0;
-	this->color = *color;
+	this->colorP = *color;
 }
 
 Point::Point(float x, float y)
@@ -51,9 +51,9 @@ Point * Point::operator=(Point point)
 	x = point.x;
 	y = point.y;
 
-	color.r = point.color.r;
-	color.g = point.color.g;
-	color.b = point.color.b;
+	colorP.r = point.colorP.r;
+	colorP.g = point.colorP.g;
+	colorP.b = point.colorP.b;
 
 	return this;
 }

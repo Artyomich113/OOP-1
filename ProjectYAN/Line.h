@@ -5,7 +5,7 @@
 class Line
 {
 public:
-	Color color;
+	Color colorL;
 	float x0,x1,y0,y1;
 
 	void print();

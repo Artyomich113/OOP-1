@@ -28,7 +28,7 @@ Line * Line::operator=(Line ob)
 	y0 = ob.y0;
 	y1 = ob.y1;
 
-	this->color.Equals(&ob.color);
+	this->colorL.Equals(&ob.colorL);
 	return this;
 }
 
@@ -40,7 +40,7 @@ Line::Line(float x0, float y0, float x1, float y1, Color * color)
 	this->y1 = y1;
 
 	if (color)
-		this->color.Equals(color);
+		this->colorL.Equals(color);
 }
 
 

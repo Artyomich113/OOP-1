@@ -15,7 +15,7 @@ SquareEXT::SquareEXT(Point * point, Line * line,Color *color)
 	y0 = line->y0;
 	y1 = line->y1;
 
-	this->color.Equals(color);
+	this->colorS.Equals(color);
 }
 
 
@@ -29,7 +29,7 @@ void SquareEXT::print()
 	Line line(x0,y0,x1,y1,nullptr);
 	std::cout << "center " << x << " " << y << " with edge of " << distLine(line) * 2 << std::endl;
 
-	color.print();
+	colorS.print();
 }
 
 void SquareEXT::translate(float x, float y)
