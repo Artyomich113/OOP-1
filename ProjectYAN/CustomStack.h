@@ -1,6 +1,32 @@
-#include "stack.h"
+#pragma once
+
+//#include <cassert> // assert
+//#include <iostream>
+//#include <iomanip> // setw
+template<class T> struct data
+{
+	T *val;
+	data<T> * nextptr;
+};
 
 
+template <class T> class Stack
+{
+	int len;
+	data<T> * top;
+public:
+	Stack();
+	Stack(const Stack<T> &);
+	~Stack();
+
+	void operator +=(T);
+	void operator --();
+	void push(T*); 
+	T* pop(); 
+	void print(); 
+	int Size(); 
+	data<T> * Top(); 
+};
 
 template <typename T>
 Stack<T>::Stack()
@@ -38,7 +64,7 @@ void Stack<T>::operator+=(T ob)
 {
 	data<T> * new_el = new data<T>;
 	new_el->val = ob;
-	len ++;
+	len++;
 	new_el->nextptr = top;
 	top = new_el;
 }
@@ -49,7 +75,7 @@ void Stack<T>::operator--()
 	pop();
 }
 
-template <class T> void Stack<T>::push(const T &a)
+template <class T> void Stack<T>::push(T* a)
 {
 	len++;
 	data<T> * new_el = new data<T>;
@@ -82,9 +108,10 @@ template <typename T>
 void Stack<T>::print()
 {
 	data<T> * b = top;
+	std::cout << "stack print" << std::endl;
 	while (b)
 	{
-		std::cout << "\n" << *b->val;
+		std::cout << b->val << std::endl;
 		b = b->nextptr;
 	}
 }

@@ -1,15 +1,9 @@
 #pragma once
-
-#include <cassert> // assert
-#include <iostream>
-#include <iomanip> // setw
-
 template<class T> struct data
 {
 	T *val;
 	data<T> * nextptr;
 };
-
 
 template <class T> class Stack
 {
@@ -22,9 +16,10 @@ public:
 
 	void operator +=(T);
 	void operator --();
-	void push(const T &); 
-	T* pop(); 
-	void print(); 
-	int Size(); 
-	data<T> * Top(); 
+	void push(const T &);
+	T* pop();
+	void print();
+	int Size();
+	data<T> * Top();
 };
+

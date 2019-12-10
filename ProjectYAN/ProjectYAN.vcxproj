@@ -124,7 +124,8 @@
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Square.cpp" />
     <ClCompile Include="SquareEXT.cpp" />
-    <ClCompile Include="stack.cpp" />
+    <ClCompile Include="CustomStack.cpp" />
+    <ClCompile Include="Stack2.cpp" />
     <ClCompile Include="ThreeDShape.cpp" />
     <ClCompile Include="Triangle.cpp" />
     <ClCompile Include="TwoDShape.cpp" />
@@ -139,7 +140,8 @@
     <ClInclude Include="Shape.h" />
     <ClInclude Include="Square.h" />
     <ClInclude Include="SquareEXT.h" />
-    <ClInclude Include="stack.h" />
+    <ClInclude Include="CustomStack.h" />
+    <ClInclude Include="Stack2.h" />
     <ClInclude Include="ThreeDShape.h" />
     <ClInclude Include="Triangle.h" />
     <ClInclude Include="TwoDShape.h" />

@@ -34,6 +34,7 @@ void SquareEXT::print()
 
 void SquareEXT::translate(float x, float y)
 {
+	std::cout << "Translate by (" << x << ";" << y <<")" << std::endl;
 	Point::translate(x,y);
 	Line::translate(x,y);
 }

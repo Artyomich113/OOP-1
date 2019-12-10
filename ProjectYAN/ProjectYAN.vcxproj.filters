@@ -60,7 +60,10 @@
     <ClCompile Include="SquareEXT.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="stack.cpp">
+    <ClCompile Include="CustomStack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Stack2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -101,7 +104,10 @@
     <ClInclude Include="SquareEXT.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="stack.h">
+    <ClInclude Include="CustomStack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Stack2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -10,7 +10,7 @@
 
 */
 
-#define LAB 7
+#define LAB 6
 
 #if LAB == 2
 #include "Matrix.h"
@@ -29,17 +29,18 @@
 #include "Line.h"
 #include "Color.h"
 #include "SquareEXT.h"
-#endif // LAB == 6
+#endif 
 
 #if LAB ==4 || LAB ==5
 bool GlIntersect(Shape *ob1, Shape *ob2); //заранее декларация функции
 #endif
 
 #if LAB == 7
-
 #include "Cstring.h"
-#include "stack.h"
+#include "CustomStack.h"
+#endif
 
+#if LAB == 7
 template<class T>
 T* Max(T* val1, T* val2)
 {
@@ -89,22 +90,17 @@ int main()
 		while (*ptr != '\0')
 		{
 			std::cout << std::hex << (int)*ptr << " ";
-
 			ptr++; //идем к следующему символу
 		}
 		std::cout << std::endl;
-
 		ptr = str;
 		while (*ptr != '\0')
 		{
 			std::cout << std::oct << (int)*ptr << " ";
-
 			ptr++; //идем к следующему символу
 		}
 		std::cout << std::endl;
-
 	} while (strcmp(str, line) != 0); //пока ввод не будет равен статическому массиву Line
-
 	delete[] str;
 #endif
 #if LAB == 2
@@ -163,7 +159,8 @@ int main()
 	delete line;
 #endif // LAB == 6
 #if LAB == 7
-	Stack<int> stack;
+	Stack<Cstring> stack;
+	
 	Cstring *str1 = new Cstring();
 	Cstring *str2 = new Cstring();
 	char* chararray1 = new char[50];
@@ -171,17 +168,20 @@ int main()
 	//в первом сравнений используется собственный класс стринг
 	std::cin >> str1;
 	std::cin >> str2;
+	
 	std::cout << Max(str1, str2) << std::endl;
-	delete str1;
-	delete str2;
 	//в втором используется масссив чаров
 	std::cin >> chararray1;
 	std::cin >> chararray2;
 	std::cout << Max(chararray1, chararray2) << std::endl;
+	stack.push(str1);
+	stack.push(str2);
+	stack.print();
+	
+	//delete str1;
+	//delete str2;
 	delete chararray1;
 	delete chararray2;
-	stack += 1;
-	stack += 2;
 #endif
 
 
