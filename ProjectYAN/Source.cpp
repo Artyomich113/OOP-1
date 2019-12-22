@@ -150,9 +150,9 @@ int main()
 	Point * center = new Point(1.0f, 1.0f, color);
 	Line * line = new Line(2.0f, 2.0f, 2.0f, 0.0f, color);
 	SquareEXT * square = new SquareEXT(center, line, color);
-	square->print();
-	square->translate(-5, -5);
-	square->print();
+	square->print();//вывод информации
+	square->translate(-5, -5);//вывод трансляция квадрата
+	square->print();//вывод информации
 	delete color;
 	delete center;
 	delete square;
@@ -165,7 +165,7 @@ int main()
 	Cstring *str2 = new Cstring();
 	char* chararray1 = new char[50];
 	char* chararray2 = new char[50];
-	//в первом сравнений используется собственный класс стринг
+	//в первом сравнений используется собственный класс стрингов
 	std::cin >> str1;
 	std::cin >> str2;
 	
